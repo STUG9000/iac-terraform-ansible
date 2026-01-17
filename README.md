@@ -1,9 +1,27 @@
-## Observações
-- Este projeto foi desenvolvido como um teste e primeiro contato prático com o Ansible
-- A chave SSH (`.pem`) não está incluída no repositório por segurança
-- O arquivo `terraform.tfstate` não é versionado
-- Projeto criado para fins de estudo e prática de Infraestrutura como Código (IaC)
+# Infraestrutura como Código com Terraform e Ansible (AWS)
 
----
+Este projeto implementa a criação e configuração automática de uma instância EC2 na AWS utilizando o conceito de Infraestrutura como Código (IaC).
 
-Projeto desenvolvido por Gabriel Stuginski Lima
+A infraestrutura é provisionada com Terraform e, em seguida, configurada com Ansible para preparar o ambiente e iniciar um servidor web simples.
+
+## Tecnologias utilizadas
+
+- Terraform
+- Ansible
+- AWS EC2
+- Linux (Ubuntu)
+- WSL
+
+## Funcionalidades
+
+- Provisionamento automático de instância EC2
+- Configuração remota via SSH usando Ansible
+- Criação de arquivo HTML na instância
+- Inicialização de servidor HTTP na porta 8000
+
+## Estrutura do projeto
+
+- `main.tf` – definição da infraestrutura AWS
+- `playbook.yml` – automação da configuração com Ansible
+- `hosts.yml` – inventário dos servidores
+- `.terraform.lock.hcl` – controle de versão dos providers
