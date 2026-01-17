@@ -24,6 +24,6 @@ resource "aws_instance" "app_server" {
 #            echo "<h1>Feito com Terraform</h1>" > index.html
 #            nohup busybox httpd -f -p 8080 &
   tags = {
-    Name = "Teste aws-2"
+    Name = "TERRAFORM ANSIBLE PYTHON"
   }
 }
