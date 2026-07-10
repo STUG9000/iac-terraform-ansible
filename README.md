@@ -25,3 +25,18 @@ A infraestrutura é provisionada com Terraform e, em seguida, configurada com An
 - `playbook.yml` – automação da configuração com Ansible
 - `hosts.yml` – inventário dos servidores
 - `.terraform.lock.hcl` – controle de versão dos providers
+
+## Como usar
+
+```bash
+# 1. Provisiona a instância EC2
+terraform init
+terraform plan
+terraform apply
+
+# 2. Configura o servidor via Ansible (usa o IP gerado pelo terraform apply)
+ansible-playbook -i hosts.yml playbook.yml
+
+# 3. Acesse o resultado
+curl http://<ip-da-instancia>:8000
+```
